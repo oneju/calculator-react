@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 import { darkMode, defaultMode, lightMode } from "../theme";
-// import ThemeToggle from "./themeToggle";
 
 const AppHeader = ({ HandleThemeChange }) => {
   return (
@@ -18,14 +17,17 @@ const AppHeader = ({ HandleThemeChange }) => {
             <ThemeButton
               onClick={() => HandleThemeChange(defaultMode)}
               value="default"
+              aria-label="theme01"
             />
             <ThemeButton
               onClick={() => HandleThemeChange(lightMode)}
               value="light"
+              aria-label="theme02"
             />
             <ThemeButton
               onClick={() => HandleThemeChange(darkMode)}
               value="dark"
+              aria-label="theme03"
             />
           </ThemeButtonContainer>
         </ToggleWrapper>
@@ -43,8 +45,6 @@ const HeadContainer = styled.header`
 `;
 const Logo = styled.h1`
   color: ${(props) => props.theme.color.displayText};
-  /* text-align: end; */
-  /* align-content: end; */
   height: 1rem;
   margin-bottom: 0;
   margin-top: 2rem;
@@ -80,8 +80,7 @@ const ThemeButtonContainer = styled.div`
   border-radius: 1rem;
   padding: 0.3rem;
 `;
-const ThemeButton = styled.div`
-  transition: all 0.5s ease-in-out;
+const ThemeButton = styled.button`
   height: 1rem;
   width: 1rem;
   border-radius: 1rem;
