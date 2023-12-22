@@ -4,7 +4,7 @@ const ValueBox = ({ display }) => {
   return (
     <div>
       <InputContainer>
-        <InputValue>{display}</InputValue>
+        <InputValue>{display ? display : " "}</InputValue>
       </InputContainer>
     </div>
   );

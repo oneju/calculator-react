@@ -80,7 +80,7 @@ const ThemeButtonContainer = styled.div`
   border-radius: 1rem;
   padding: 0.3rem;
 `;
-const ThemeButton = styled.button`
+const ThemeButton = styled.div`
   transition: all 0.5s ease-in-out;
   height: 1rem;
   width: 1rem;
